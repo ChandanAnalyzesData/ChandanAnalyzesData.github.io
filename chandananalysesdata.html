@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chandan K A — Senior Risk Analyst & Data Analytics Professional</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0d0d0d;
+  --ink2:#3a3a3a;
+  --ink3:#717171;
+  --paper:#faf8f4;
+  --accent:#c8522a;
+  --accent2:#1a3a5c;
+  --accent-light:#f5e8e2;
+  --gold:#b8923a;
+  --border:#e2ddd6;
+  --ff-display:'Playfair Display',serif;
+  --ff-body:'DM Sans',sans-serif;
+  --ff-mono:'DM Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--ff-body);
+  background:var(--paper);
+  color:var(--ink);
+  font-size:16px;
+  line-height:1.7;
+  overflow-x:hidden;
+}
+
+/* Grain overlay */
+body::before{
+  content:'';
+  position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:0;opacity:.4;
+}
+
+/* Nav */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:9999;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:1.2rem 4rem;
+  background:rgba(250,248,244,0.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{
+  font-family:var(--ff-display);
+  font-size:1.1rem;font-weight:700;
+  color:var(--ink);letter-spacing:-.02em;
+}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{
+  font-size:.85rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ink2);text-decoration:none;
+  transition:color .2s;
+}
+.nav-links a:hover{color:var(--accent)}
+
+/* Hero */
+.hero{
+  min-height:100vh;
+  display:grid;grid-template-columns:1fr 1fr;
+  padding-top:80px;
+  position:relative;overflow:hidden;
+}
+.hero-left{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:5rem 3rem 5rem 4rem;
+  position:relative;z-index:2;
+}
+.hero-eyebrow{
+  font-family:var(--ff-mono);font-size:.78rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent);
+  margin-bottom:1.5rem;
+  display:flex;align-items:center;gap:.75rem;
+}
+.hero-eyebrow::before{content:'';width:32px;height:1px;background:var(--accent)}
+.hero-name{
+  font-family:var(--ff-display);
+  font-size:clamp(3rem,5vw,5.5rem);
+  font-weight:900;line-height:1.0;
+  letter-spacing:-.04em;color:var(--ink);
+  margin-bottom:1rem;
+}
+.hero-name span{color:var(--accent)}
+.hero-title{
+  font-size:1.05rem;font-weight:300;
+  color:var(--ink2);line-height:1.5;
+  max-width:480px;margin-bottom:2.5rem;
+  border-left:3px solid var(--accent);
+  padding-left:1.2rem;
+}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:var(--ink);color:var(--paper);
+  padding:.75rem 1.75rem;border-radius:0;
+  font-size:.85rem;font-weight:500;letter-spacing:.04em;
+  text-decoration:none;transition:background .2s,transform .15s;
+}
+.btn-primary:hover{background:var(--accent);transform:translateY(-2px)}
+.btn-secondary{
+  display:inline-flex;align-items:center;gap:.5rem;
+  border:1.5px solid var(--ink);color:var(--ink);
+  padding:.75rem 1.75rem;border-radius:0;
+  font-size:.85rem;font-weight:500;letter-spacing:.04em;
+  text-decoration:none;transition:all .2s;
+}
+.btn-secondary:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+.hero-right{
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  background:var(--ink);position:relative;overflow:hidden;
+  padding:4rem;
+}
+.hero-right::before{
+  content:'';position:absolute;
+  width:400px;height:400px;border-radius:50%;
+  background:radial-gradient(circle,rgba(200,82,42,.25) 0%,transparent 70%);
+  top:50%;left:50%;transform:translate(-50%,-50%);
+}
+.hero-stats{
+  display:grid;grid-template-columns:1fr 1fr;gap:1px;
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.1);
+  position:relative;z-index:1;width:100%;max-width:360px;
+}
+.stat-block{
+  background:var(--ink);
+  padding:2rem;
+  transition:background .25s;
+}
+.stat-block:hover{background:#1e1e1e}
+.stat-num{
+  font-family:var(--ff-display);
+  font-size:2.8rem;font-weight:900;color:var(--accent);
+  line-height:1;margin-bottom:.3rem;
+}
+.stat-desc{font-size:.75rem;color:rgba(255,255,255,.5);letter-spacing:.08em;text-transform:uppercase}
+.hero-badge{
+  margin-top:2rem;z-index:1;
+  display:flex;align-items:center;gap:.75rem;
+  background:rgba(200,82,42,.15);border:1px solid rgba(200,82,42,.3);
+  padding:.6rem 1.2rem;
+  font-family:var(--ff-mono);font-size:.75rem;color:rgba(255,255,255,.7);
+  letter-spacing:.06em;
+}
+.hero-badge span{color:var(--accent);font-weight:500}
+
+/* Sections */
+section{padding:6rem 4rem;scroll-margin-top:70px}
+.section-label{
+  font-family:var(--ff-mono);font-size:.72rem;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:.5rem;
+  display:flex;align-items:center;gap:.75rem;
+}
+.section-label::before{content:'';width:28px;height:1px;background:var(--accent)}
+.section-title{
+  font-family:var(--ff-display);
+  font-size:clamp(2rem,3.5vw,3rem);
+  font-weight:700;line-height:1.15;
+  letter-spacing:-.03em;margin-bottom:3rem;
+}
+
+/* About / Analytics section */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.about-text p{font-size:1rem;color:var(--ink2);line-height:1.8;margin-bottom:1rem}
+.about-text p:last-child{margin-bottom:0}
+.skills-panel{
+  background:var(--ink);color:var(--paper);
+  padding:2.5rem;
+}
+.skills-panel h4{
+  font-family:var(--ff-mono);font-size:.72rem;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.4);margin-bottom:1.5rem;
+}
+.skill-row{margin-bottom:1.25rem}
+.skill-top{display:flex;justify-content:space-between;margin-bottom:.4rem;
+  font-size:.82rem;font-weight:500;color:rgba(255,255,255,.85)}
+.skill-bar{height:2px;background:rgba(255,255,255,.1)}
+.skill-fill{height:100%;background:var(--accent);transition:width 1s ease}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2rem}
+.tag{
+  font-family:var(--ff-mono);font-size:.7rem;
+  letter-spacing:.06em;padding:.3rem .8rem;
+  border:1px solid rgba(255,255,255,.15);
+  color:rgba(255,255,255,.6);
+  transition:all .2s;cursor:default;
+}
+.tag:hover{border-color:var(--accent);color:var(--accent)}
+
+/* Experience */
+.exp-section{background:#f0ede7}
+.exp-list{display:flex;flex-direction:column;gap:0}
+.exp-item{
+  display:grid;grid-template-columns:220px 1fr;
+  border-bottom:1px solid var(--border);
+  padding:2.5rem 0;
+  gap:2rem;
+}
+.exp-item:last-child{border-bottom:none}
+.exp-meta{padding-top:.2rem}
+.exp-date{
+  font-family:var(--ff-mono);font-size:.72rem;
+  color:var(--ink3);letter-spacing:.06em;margin-bottom:.5rem;
+}
+.exp-company{
+  font-family:var(--ff-display);
+  font-size:1.1rem;font-weight:700;color:var(--ink);
+  margin-bottom:.2rem;
+}
+.exp-badge{
+  display:inline-block;
+  font-family:var(--ff-mono);font-size:.65rem;
+  letter-spacing:.08em;padding:.2rem .6rem;
+  background:var(--accent-light);color:var(--accent);
+  text-transform:uppercase;margin-top:.4rem;
+}
+.exp-content h3{
+  font-family:var(--ff-display);
+  font-size:1.25rem;font-weight:700;
+  color:var(--ink);margin-bottom:1rem;
+}
+.exp-bullets{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.exp-bullets li{
+  font-size:.9rem;color:var(--ink2);
+  padding-left:1.2rem;position:relative;line-height:1.6;
+}
+.exp-bullets li::before{
+  content:'—';position:absolute;left:0;
+  color:var(--accent);font-size:.8rem;top:.05em;
+}
+.highlight-chip{
+  display:inline-block;
+  background:var(--ink);color:var(--paper);
+  font-size:.75rem;font-weight:500;
+  padding:.2rem .7rem;margin:.1rem;
+  border-radius:0;
+}
+
+/* Analytics expertise */
+.analytics-section{
+  background:var(--ink);color:var(--paper);
+}
+.analytics-section .section-title{color:var(--paper)}
+.analytics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.08)}
+.analytics-card{
+  background:var(--ink);padding:2.5rem;
+  transition:background .25s;
+}
+.analytics-card:hover{background:#181818}
+.analytics-icon{
+  width:44px;height:44px;
+  background:rgba(200,82,42,.15);
+  border:1px solid rgba(200,82,42,.3);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.3rem;margin-bottom:1.5rem;
+}
+.analytics-card h3{
+  font-family:var(--ff-display);font-size:1.1rem;
+  font-weight:700;color:var(--paper);
+  margin-bottom:.75rem;
+}
+.analytics-card p{font-size:.85rem;color:rgba(255,255,255,.5);line-height:1.7}
+.tool-pills{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}
+.tool-pill{
+  font-family:var(--ff-mono);font-size:.65rem;
+  letter-spacing:.06em;padding:.2rem .65rem;
+  background:rgba(200,82,42,.12);
+  border:1px solid rgba(200,82,42,.25);
+  color:rgba(200,82,42,.9);
+}
+
+/* Awards */
+.awards-section{background:var(--accent2);color:var(--paper)}
+.awards-section .section-title{color:var(--paper)}
+.awards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.award-card{
+  border:1px solid rgba(255,255,255,.12);
+  padding:2rem;
+  position:relative;overflow:hidden;
+  transition:transform .25s,border-color .25s;
+}
+.award-card:hover{transform:translateY(-4px);border-color:var(--gold)}
+.award-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;
+  height:2px;background:var(--gold);
+}
+.award-number{
+  font-family:var(--ff-display);
+  font-size:3.5rem;font-weight:900;
+  color:rgba(255,255,255,.06);
+  position:absolute;top:.5rem;right:1rem;
+  line-height:1;
+}
+.award-icon{font-size:1.8rem;margin-bottom:1rem}
+.award-card h3{
+  font-family:var(--ff-display);font-size:1rem;
+  font-weight:700;color:var(--paper);margin-bottom:.5rem;
+}
+.award-card p{font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.6}
+
+/* Education */
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.edu-card{
+  border:1.5px solid var(--border);
+  padding:2.5rem;
+  position:relative;
+}
+.edu-card::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;
+  width:3px;background:var(--accent);
+}
+.edu-degree{
+  font-family:var(--ff-display);font-size:1.2rem;
+  font-weight:700;color:var(--ink);margin-bottom:.3rem;
+}
+.edu-school{font-size:.9rem;color:var(--ink2);margin-bottom:.5rem}
+.edu-meta{font-family:var(--ff-mono);font-size:.72rem;color:var(--ink3);letter-spacing:.06em}
+
+/* Contact */
+.contact-section{background:var(--ink);color:var(--paper)}
+.contact-inner{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:4rem;align-items:center;
+}
+.contact-section .section-title{color:var(--paper)}
+.contact-section .section-label::before{background:rgba(200,82,42,.8)}
+.contact-list{display:flex;flex-direction:column;gap:1.5rem}
+.contact-item{
+  display:flex;align-items:center;gap:1.2rem;
+  padding:1.25rem;
+  border:1px solid rgba(255,255,255,.08);
+  transition:border-color .2s;
+}
+.contact-item:hover{border-color:rgba(200,82,42,.4)}
+.contact-item-icon{
+  width:40px;height:40px;
+  background:rgba(200,82,42,.12);
+  border:1px solid rgba(200,82,42,.25);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;flex-shrink:0;
+}
+.contact-item-label{font-family:var(--ff-mono);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:.2rem}
+.contact-item-value{font-size:.9rem;color:rgba(255,255,255,.85)}
+.contact-item-value a{color:inherit;text-decoration:none}
+.contact-item-value a:hover{color:var(--accent)}
+
+/* Scroll reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* Mobile */
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem}
+  .nav-links{gap:1rem}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-left{padding:7rem 1.5rem 3rem}
+  .hero-right{padding:3rem 1.5rem;min-height:300px}
+  section{padding:4rem 1.5rem}
+  .about-grid,.contact-inner,.edu-grid{grid-template-columns:1fr;gap:2rem}
+  .analytics-grid,.awards-grid{grid-template-columns:1fr;gap:1px}
+  .exp-item{grid-template-columns:1fr}
+  .hero-stats{max-width:100%}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Chandan K A</div>
+  <ul class="nav-links">
+    <li><a href="#about" onclick="navScrollTo('about');return false;">About</a></li>
+    <li><a href="#analytics" onclick="navScrollTo('analytics');return false;">Analytics</a></li>
+    <li><a href="#experience" onclick="navScrollTo('experience');return false;">Experience</a></li>
+    <li><a href="#awards" onclick="navScrollTo('awards');return false;">Awards</a></li>
+    <li><a href="#contact" onclick="navScrollTo('contact');return false;">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Senior Risk Analyst & Data Professional</div>
+    <h1 class="hero-name">Chandan<br><span>K A</span></h1>
+    <p class="hero-title">Fraud Prevention · Financial Crime Analytics · A2P Messaging Compliance · KYC/AML & EDD Specialist</p>
+    <div class="hero-ctas">
+      <a href="#experience" class="btn-primary">View Experience ↓</a>
+      <a href="mailto:chandanka112@gmail.com" class="btn-secondary">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-stats">
+      <div class="stat-block">
+        <div class="stat-num">5.3<span style="font-size:1.5rem">+</span></div>
+        <div class="stat-desc">Years Experience</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">8×</div>
+        <div class="stat-desc">MVP Awards</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">95<span style="font-size:1.5rem">%+</span></div>
+        <div class="stat-desc">CSAT Score</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">GEM</div>
+        <div class="stat-desc">Award Winner</div>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <span>▸</span> VISA · MasterCard · NPCI · Razorpay · Twilio
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="reveal">
+    <div class="section-label">Profile</div>
+    <h2 class="section-title">About Me</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <p>Senior Risk Analyst with <strong>5.3+ years</strong> of specialized experience in fraud prevention, risk operations, and financial crime analytics across fintech and A2P messaging ecosystems.</p>
+      <p>Experienced in leveraging advanced analytics, SQL-based data exploration, and real-time monitoring tools to identify patterns, detect anomalies, and drive actionable insights across fintech, fraud risk, and financial crime domains.</p>
+      <p>Proven expertise in transforming complex datasets into meaningful business intelligence using tools like SQL, Looker, Databricks, Splunk, and Snowflake to support decision-making and risk mitigation strategies. Strong background in analyzing large-scale transactional and behavioral data to uncover fraud trends, optimize detection models, and improve operational efficiency.</p>
+      <p>Experienced in building and refining data-driven rule frameworks, reducing false positives, and enhancing accuracy of fraud detection systems through continuous data validation and root-cause analysis. Skilled in developing dashboards, reports, and operational insights that support cross-functional stakeholders, regulatory compliance, and business performance tracking.</p>
+      <p>Demonstrated success in stakeholder communication, presenting analytical findings to global teams, and supporting data-backed decisions in high-impact environments including VISA, MasterCard, NPCI, and fintech ecosystems. <strong>Award-winning professional</strong> with 8× MVP and GEM recognition at Razorpay for outstanding contributions in data-driven fraud prevention.</p>
+    </div>
+    <div class="skills-panel reveal">
+      <h4>Core Competencies</h4>
+
+      <div class="skill-row">
+        <div class="skill-top"><span>SQL & Data Analytics</span><span>95%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-top"><span>Fraud Detection & Prevention</span><span>97%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:97%"></div></div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-top"><span>KYC / AML / EDD</span><span>90%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-top"><span>Looker / Databricks / Splunk</span><span>88%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-top"><span>Stakeholder Communication</span><span>93%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:93%"></div></div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-top"><span>A2P Messaging Compliance</span><span>92%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div>
+      </div>
+
+      <div class="tag-cloud">
+        <span class="tag">SQL</span>
+        <span class="tag">Snowflake</span>
+        <span class="tag">Looker</span>
+        <span class="tag">Databricks</span>
+        <span class="tag">Splunk</span>
+        <span class="tag">Kibana</span>
+        <span class="tag">Salesforce</span>
+        <span class="tag">ServiceNow</span>
+        <span class="tag">Jira</span>
+        <span class="tag">10DLC</span>
+        <span class="tag">ATO Investigations</span>
+        <span class="tag">Root-Cause Analysis</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANALYTICS EXPERTISE -->
+<section id="analytics" class="analytics-section">
+  <div class="reveal">
+    <div class="section-label" style="color:rgba(200,82,42,.8)">Data Analytics Skills</div>
+    <h2 class="section-title">Analytics Expertise</h2>
+  </div>
+  <div class="analytics-grid">
+    <div class="analytics-card reveal">
+      <div class="analytics-icon">📊</div>
+      <h3>Data Exploration & SQL</h3>
+      <p>Advanced SQL-based data exploration across large-scale transactional and behavioral datasets to surface patterns, detect anomalies, and support risk-based decisions.</p>
+      <div class="tool-pills">
+        <span class="tool-pill">SQL</span>
+        <span class="tool-pill">Snowflake</span>
+        <span class="tool-pill">Sequel Pro</span>
+      </div>
+    </div>
+    <div class="analytics-card reveal">
+      <div class="analytics-icon">🔍</div>
+      <h3>Real-Time Monitoring</h3>
+      <p>Leveraging Splunk and Kibana for real-time risk monitoring and alerting, enabling rapid incident response and fraud vector identification through log analysis.</p>
+      <div class="tool-pills">
+        <span class="tool-pill">Splunk</span>
+        <span class="tool-pill">Kibana</span>
+        <span class="tool-pill">Alerting</span>
+      </div>
+    </div>
+    <div class="analytics-card reveal">
+      <div class="analytics-icon">📈</div>
+      <h3>Business Intelligence</h3>
+      <p>Transforming complex datasets into meaningful BI dashboards and reports that support cross-functional stakeholders, regulatory compliance, and business performance tracking.</p>
+      <div class="tool-pills">
+        <span class="tool-pill">Looker</span>
+        <span class="tool-pill">Databricks</span>
+        <span class="tool-pill">Dashboards</span>
+      </div>
+    </div>
+    <div class="analytics-card reveal">
+      <div class="analytics-icon">🛡️</div>
+      <h3>Fraud Rule Frameworks</h3>
+      <p>Building and refining data-driven rule frameworks, reducing false positives, and enhancing fraud detection accuracy through continuous data validation and root-cause analysis.</p>
+      <div class="tool-pills">
+        <span class="tool-pill">Rule Design</span>
+        <span class="tool-pill">False Positive Reduction</span>
+      </div>
+    </div>
+    <div class="analytics-card reveal">
+      <div class="analytics-icon">🔬</div>
+      <h3>Statistical Analysis</h3>
+      <p>Analyzing structured and semi-structured data to uncover fraud trends, optimize detection models, and improve operational efficiency using statistical and behavioral analysis methods.</p>
+      <div class="tool-pills">
+        <span class="tool-pill">Pattern Analysis</span>
+        <span class="tool-pill">Anomaly Detection</span>
+      </div>
+    </div>
+    <div class="analytics-card reveal">
+      <div class="analytics-icon">💡</div>
+      <h3>Actionable Reporting</h3>
+      <p>Adept at working with large-scale datasets to generate insights that improve customer experience, reduce risk exposure, and strengthen process efficiency — presented to global teams.</p>
+      <div class="tool-pills">
+        <span class="tool-pill">Operational Reporting</span>
+        <span class="tool-pill">Trend Analysis</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="exp-section">
+  <div class="reveal">
+    <div class="section-label">Career</div>
+    <h2 class="section-title">Work Experience</h2>
+  </div>
+  <div class="exp-list">
+
+    <!-- Twilio -->
+    <div class="exp-item reveal">
+      <div class="exp-meta">
+        <div class="exp-date">Feb 2025 — Present</div>
+        <div class="exp-company">Twilio</div>
+        <div class="exp-badge">Current Role</div>
+      </div>
+      <div class="exp-content">
+        <h3>Technical Support Engineer — L2</h3>
+        <ul class="exp-bullets">
+          <li>Leading fraud strategy and ATO investigations by analyzing high-volume log data in Splunk, identifying attack patterns, and strengthening account security frameworks.</li>
+          <li>Driving risk mitigation and credential security initiatives by guiding customers on account recovery, exposure handling, and proactive security hardening measures.</li>
+          <li>Ensuring A2P messaging compliance across 10DLC, Toll-Free (TFN), and Short Code frameworks, aligning with carrier regulations and industry standards.</li>
+          <li>Managing vetting and compliance operations including DNA vetting and campaign registration via TCR/DCA portals to enable compliant messaging workflows.</li>
+          <li>Performing advanced root-cause analysis on critical security incidents and collaborating with engineering teams to implement scalable preventive controls.</li>
+          <li>Resolved a high-impact account suspension via advanced log analysis (Splunk/Kibana) to identify ATO patterns — <span class="highlight-chip">95%+ CSAT</span> through proactive customer guidance.</li>
+          <li>Resolved A2P 10DLC campaign rejections by conducting in-depth compliance analysis, restoring campaign approvals with <span class="highlight-chip">95%+ CSAT</span>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Razorpay Senior -->
+    <div class="exp-item reveal">
+      <div class="exp-meta">
+        <div class="exp-date">Apr 2024 — Jan 2025</div>
+        <div class="exp-company">Razorpay</div>
+        <div class="exp-badge">Senior Analyst</div>
+      </div>
+      <div class="exp-content">
+        <h3>Senior Analyst, Risk Management</h3>
+        <ul class="exp-bullets">
+          <li>Optimized risk alert framework by identifying and resolving false-positive triggers, collaborating with engineering to refine detection logic (Looker/Databricks), significantly reducing alert noise and improving fraud detection precision.</li>
+          <li>Executed Enhanced Due Diligence (EDD) and KYC reviews to ensure compliant merchant onboarding aligned with regulatory standards and internal risk policies.</li>
+          <li>Managed high-impact risk escalations as SPOC for international merchants, delivering timely, data-driven resolutions while maintaining strong stakeholder communication.</li>
+          <li>Collaborated with cross-functional teams and leadership to generate actionable insights, enabling proactive fraud prevention strategies and continuous risk mitigation improvements.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Razorpay Analyst -->
+    <div class="exp-item reveal">
+      <div class="exp-meta">
+        <div class="exp-date">Sep 2021 — Mar 2024</div>
+        <div class="exp-company">Razorpay</div>
+        <div class="exp-badge">Analyst</div>
+      </div>
+      <div class="exp-content">
+        <h3>Analyst, Risk Management</h3>
+        <ul class="exp-bullets">
+          <li>Monitored client portfolios using data-driven risk rules and transaction-level analytics, proactively identifying suspicious patterns and mitigating fraudulent activities.</li>
+          <li>Managed fraud reporting and external stakeholder coordination, liaising with networks such as <strong>VISA, MasterCard, RBL, and NPCI</strong> to ensure timely resolution and compliance.</li>
+          <li>Supported regulatory compliance and audit readiness, contributing to internal audits aligned with RBI guidelines and strengthening risk governance frameworks.</li>
+          <li>Enhanced fraud detection and operational efficiency by leveraging reporting insights and improving risk monitoring processes.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Razorpay Junior -->
+    <div class="exp-item reveal">
+      <div class="exp-meta">
+        <div class="exp-date">Feb 2021 — Aug 2021</div>
+        <div class="exp-company">Razorpay</div>
+        <div class="exp-badge">Junior Analyst</div>
+      </div>
+      <div class="exp-content">
+        <h3>Junior Analyst, Risk Management</h3>
+        <ul class="exp-bullets">
+          <li>Analyzed transaction-level data and monitored client portfolios using rule-based risk frameworks to detect anomalies and prevent fraudulent activities.</li>
+          <li>Conducted KYC assessments and leveraged risk engine reports to identify potential threats, strengthen onboarding controls, and minimize financial losses.</li>
+          <li>Utilized Looker for data-driven analysis and reporting, generating actionable insights to enhance fraud detection and decision-making.</li>
+          <li>Managed fraud reporting and stakeholder coordination with VISA, MasterCard, RBL, and NPCI, ensuring timely resolution and compliance adherence.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section id="awards" class="awards-section">
+  <div class="reveal">
+    <div class="section-label" style="color:rgba(184,146,58,.8)">Recognition</div>
+    <h2 class="section-title">Awards & Honours</h2>
+  </div>
+  <div class="awards-grid">
+    <div class="award-card reveal">
+      <div class="award-number">8×</div>
+      <div class="award-icon">🏆</div>
+      <h3>Most Valuable Player (MVP)</h3>
+      <p>8-time MVP awardee at Razorpay for consistently delivering high-impact contributions in fraud risk management and operational excellence over 3 years.</p>
+    </div>
+    <div class="award-card reveal">
+      <div class="award-number">GEM</div>
+      <div class="award-icon">💎</div>
+      <h3>GEM Award (2023–2024)</h3>
+      <p>Going the Extra Mile Award for demonstrating exceptional ownership, performance, and commitment to driving business-critical outcomes.</p>
+    </div>
+    <div class="award-card reveal">
+      <div class="award-number">3rd</div>
+      <div class="award-icon">🎖️</div>
+      <h3>NIIT — Venyou Project</h3>
+      <p>Secured 3rd Place at NIIT for innovation in a competitive academic and technical environment, demonstrating early problem-solving excellence.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="reveal">
+    <div class="section-label">Academic</div>
+    <h2 class="section-title">Education</h2>
+  </div>
+  <div class="edu-grid">
+    <div class="edu-card reveal">
+      <div class="edu-degree">B.Tech. — Computer Science & Engineering</div>
+      <div class="edu-school">Rajarajeshwari College of Engineering, Bengaluru, Karnataka</div>
+      <div class="edu-meta">Computer Science & Engineering</div>
+    </div>
+    <div class="edu-card reveal" style="border-color:var(--accent);background:var(--accent-light)">
+      <div class="edu-degree">Continuous Learning</div>
+      <div class="edu-school">Data Analytics · Risk Management · Financial Crime · Compliance</div>
+      <div class="edu-meta">Self-directed & On-the-job expertise across 5.3+ years</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="contact-inner">
+    <div>
+      <div class="reveal">
+        <div class="section-label">Let's Connect</div>
+        <h2 class="section-title">Get In Touch</h2>
+      </div>
+      <p class="reveal" style="color:rgba(255,255,255,.5);font-size:.95rem;max-width:400px;line-height:1.8">
+        Open to new opportunities in fraud risk analytics, financial crime investigation, data analytics, and fintech risk roles. Let's connect.
+      </p>
+    </div>
+    <div class="contact-list reveal">
+      <div class="contact-item">
+        <div class="contact-item-icon">✉</div>
+        <div>
+          <div class="contact-item-label">Email</div>
+          <div class="contact-item-value"><a href="mailto:chandanka112@gmail.com">chandanka112@gmail.com</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">in</div>
+        <div>
+          <div class="contact-item-label">LinkedIn</div>
+          <div class="contact-item-value"><a href="https://www.linkedin.com/in/chandan-k-a-41248b11b/" target="_blank">chandan-k-a-41248b11b</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">📍</div>
+        <div>
+          <div class="contact-item-label">Location</div>
+          <div class="contact-item-value">Bengaluru, Karnataka, India</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#080808;color:rgba(255,255,255,.25);text-align:center;padding:2rem;font-family:var(--ff-mono);font-size:.72rem;letter-spacing:.08em">
+  © 2025 CHANDAN K A · SENIOR RISK ANALYST & DATA ANALYTICS PROFESSIONAL
+</footer>
+
+<script>
+// Smooth scroll with nav offset
+function navScrollTo(id){
+  const el = document.getElementById(id);
+  if(!el) return;
+  const navH = document.querySelector('nav').offsetHeight;
+  const top = el.getBoundingClientRect().top + window.scrollY - navH;
+  window.scrollTo({top, behavior:'smooth'});
+}
+
+// Active nav link highlight
+const sections = ['about','analytics','experience','awards','contact'];
+const navAs = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  const navH = document.querySelector('nav').offsetHeight;
+  let current = '';
+  sections.forEach(id => {
+    const sec = document.getElementById(id);
+    if(sec && sec.getBoundingClientRect().top - navH - 10 <= 0) current = id;
+  });
+  navAs.forEach(a => {
+    a.style.color = a.getAttribute('href') === '#' + current ? 'var(--accent)' : '';
+  });
+});
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+reveals.forEach(el => io.observe(el));
+
+// Skill bar animate on scroll
+const bars = document.querySelectorAll('.skill-fill');
+bars.forEach(b => { b.dataset.width = b.style.width; b.style.width = '0'; });
+const barObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      e.target.querySelectorAll('.skill-fill').forEach(b => { b.style.width = b.dataset.width; });
+      barObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.skills-panel').forEach(p => barObserver.observe(p));
+</script>
+</body>
+</html>
