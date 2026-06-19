@@ -222,6 +222,46 @@ section{padding:5.5rem clamp(1.2rem,4vw,3.5rem);position:relative;z-index:1}
 .aw-card h3{font-family:var(--ff-d);font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:.5rem}
 .aw-card p{font-size:.83rem;color:var(--ink2);line-height:1.65}
 
+/* INSIGHTS / LINKEDIN ACTIVITY */
+#insights{background:var(--paper)}
+.ins-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.ins-card{
+  background:var(--card);border:1px solid var(--line2);border-radius:10px;
+  padding:1.6rem;display:flex;flex-direction:column;gap:1rem;
+  transition:transform .25s,box-shadow .25s,border-color .25s;
+  position:relative;overflow:hidden;
+}
+.ins-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(16,24,15,.12);border-color:#0a66c2}
+.ins-top{display:flex;align-items:center;gap:.6rem}
+.ins-logo{
+  width:30px;height:30px;border-radius:6px;background:#0a66c2;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.ins-logo svg{width:16px;height:16px;fill:#fff}
+.ins-label{font-family:var(--ff-m);font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3)}
+.ins-card h3{
+  font-family:var(--ff-d);font-size:1.02rem;font-weight:600;color:var(--ink);
+  line-height:1.4;flex:1;
+}
+.ins-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  font-family:var(--ff-b);font-size:.82rem;font-weight:600;
+  color:#fff;background:#0a66c2;
+  padding:.6rem 1.1rem;border-radius:5px;text-decoration:none;
+  transition:background .2s;width:fit-content;
+}
+.ins-btn:hover{background:var(--alert)}
+.ins-footer{
+  display:flex;justify-content:center;margin-top:2rem;
+}
+.ins-footer a{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-family:var(--ff-m);font-size:.78rem;color:var(--ink2);
+  text-decoration:none;border-bottom:1px dashed var(--line2);padding-bottom:.2rem;
+  transition:color .2s;
+}
+.ins-footer a:hover{color:var(--alert);border-color:var(--alert)}
+
 /* EDUCATION */
 #education{background:var(--paper)}
 .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
@@ -276,6 +316,7 @@ footer{background:var(--ink);color:var(--paper2);padding:2rem clamp(1.2rem,4vw,3
   .signal-grid{grid-template-columns:1fr}
   .signal-cell{border-right:none;border-bottom:1px solid var(--line)}
   .signal-cell:last-child{border-bottom:none}
+  .ins-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:860px){
   .nav-links{display:none}
@@ -285,6 +326,7 @@ footer{background:var(--ink);color:var(--paper2);padding:2rem clamp(1.2rem,4vw,3
   .aw-grid{grid-template-columns:1fr;gap:1rem}
   .ei{grid-template-columns:1fr;gap:.8rem}
   .f-row{grid-template-columns:1fr}
+  .ins-grid{grid-template-columns:1fr}
 }
 @media(max-width:540px){
   section{padding:3.5rem 1.1rem}
@@ -306,6 +348,7 @@ footer{background:var(--ink);color:var(--paper2);padding:2rem clamp(1.2rem,4vw,3
     <li><a href="#analytics">Analytics</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#awards">Awards</a></li>
+    <li><a href="#insights">Insights</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#" id="resumeDownloadNav" style="color:var(--alert)">⬇ Resume</a></li>
@@ -317,6 +360,7 @@ footer{background:var(--ink);color:var(--paper2);padding:2rem clamp(1.2rem,4vw,3
   <a href="#analytics">Analytics</a>
   <a href="#experience">Experience</a>
   <a href="#awards">Awards</a>
+  <a href="#insights">Insights</a>
   <a href="#education">Education</a>
   <a href="#contact">Contact</a>
   <a href="#" id="resumeDownloadMobile">⬇ Download Resume</a>
@@ -526,6 +570,48 @@ footer{background:var(--ink);color:var(--paper2);padding:2rem clamp(1.2rem,4vw,3
 
 <div class="ledger-divider"></div>
 
+<!-- INSIGHTS / LINKEDIN ACTIVITY -->
+<section id="insights">
+  <div class="inner">
+    <div class="reveal"><div class="sl">Thought Leadership</div><h2 class="st">Recent LinkedIn Activity</h2></div>
+    <div class="ins-grid">
+
+      <div class="ins-card reveal">
+        <div class="ins-top">
+          <div class="ins-logo"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></div>
+          <span class="ins-label">LinkedIn Post</span>
+        </div>
+        <h3>The Impact of Cryptocurrency on the Indian Economy</h3>
+        <a class="ins-btn" href="https://www.linkedin.com/posts/chandan-k-a-41248b11b_the-impact-of-cryptocurrency-on-the-indian-activity-7110644395493785600-wr-Q" target="_blank" rel="noopener">View Post →</a>
+      </div>
+
+      <div class="ins-card reveal">
+        <div class="ins-top">
+          <div class="ins-logo"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></div>
+          <span class="ins-label">LinkedIn Post</span>
+        </div>
+        <h3>Why Routing "Leaks" are Undermining Your Payment Strategy</h3>
+        <a class="ins-btn" href="https://www.linkedin.com/posts/chandan-k-a-41248b11b_paymentsrisk-fraudprevention-fintech-activity-7468586840980213760-BZpR" target="_blank" rel="noopener">View Post →</a>
+      </div>
+
+      <div class="ins-card reveal">
+        <div class="ins-top">
+          <div class="ins-logo"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></div>
+          <span class="ins-label">LinkedIn Post</span>
+        </div>
+        <h3>The Silent Break-In: Why ATO is the Most Human-Level Threat in Tech 🔓</h3>
+        <a class="ins-btn" href="https://www.linkedin.com/posts/chandan-k-a-41248b11b_frauddetection-riskstrategy-fraudprevention-activity-7473755670001963008-wC6o" target="_blank" rel="noopener">View Post →</a>
+      </div>
+
+    </div>
+    <div class="ins-footer reveal">
+      <a href="https://www.linkedin.com/in/chandan-k-a-41248b11b/recent-activity/all/" target="_blank" rel="noopener">See all posts on LinkedIn →</a>
+    </div>
+  </div>
+</section>
+
+<div class="ledger-divider"></div>
+
 <!-- EDUCATION -->
 <section id="education">
   <div class="inner">
@@ -615,7 +701,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 // Active nav
-const secs = ['about','analytics','experience','awards','education','contact'];
+const secs = ['about','analytics','experience','awards','insights','education','contact'];
 const links = document.querySelectorAll('.nav-links a');
 window.addEventListener('scroll', () => {
   const nH = document.querySelector('nav').offsetHeight;
